@@ -1,0 +1,12 @@
+{
+  "admin": {
+    "full_name": "Administrator",
+    "password": "<bcrypt_hash>",
+    "status": "active"
+  },
+  "alice": {
+    "full_name": "Alice Smith",
+    "password": "<bcrypt_hash>",
+    "status": "active"
+  }
+}

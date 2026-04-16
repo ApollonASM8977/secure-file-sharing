@@ -1,0 +1,42 @@
+# Runtime data — never commit
+users.json
+logs.json
+device_names.json
+keys/*.pem
+shared_files/*
+backup/
+!shared_files/.gitkeep
+!keys/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# PyInstaller
+*.spec
+*.exe
+*.app
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
