@@ -1,4 +1,4 @@
-# ðŸ” SecureShare
+# 🔐 SecureShare
 
 > End-to-end encrypted file sharing over local network — built with Python, PyQt6 and real cryptography.
 
@@ -21,25 +21,25 @@ Every file is encrypted before transmission using industry-standard cryptography
 | Feature | Details |
 |---|---|
 | 🔒 File Encryption | AES-256-CBC with PBKDF2-derived keys (260,000 iterations) |
-| ðŸ”‘ Key Exchange | RSA-2048 (OAEP) — each user has a unique key pair |
-| ðŸ“ Folder Encryption | Entire folders archived and encrypted as a single blob |
-| âœ… Integrity Verification | SHA-256 hash stored alongside every encrypted file |
-| ðŸŒ LAN Discovery | Automatic subnet scan to find peers running SecureShare |
-| ðŸ“¤ File Transfer | Direct peer-to-peer transfer via embedded Flask server |
-| ðŸ‘¥ Multi-Recipient | Encrypt one file for multiple users simultaneously |
-| ðŸ›¡ï¸ Admin Panel | User management, key regeneration, encrypted backup/restore |
-| ðŸ”„ Key Rotation | Regenerate your RSA key pair at any time |
+| 🔑 Key Exchange | RSA-2048 (OAEP) — each user has a unique key pair |
+| 📁 Folder Encryption | Entire folders archived and encrypted as a single blob |
+| ✅ Integrity Verification | SHA-256 hash stored alongside every encrypted file |
+| 🌐 LAN Discovery | Automatic subnet scan to find peers running SecureShare |
+| 📤 File Transfer | Direct peer-to-peer transfer via embedded Flask server |
+| 👥 Multi-Recipient | Encrypt one file for multiple users simultaneously |
+| 🛡️ Admin Panel | User management, key regeneration, encrypted backup/restore |
+| 🔄 Key Rotation | Regenerate your RSA key pair at any time |
 
 ---
 
 ## Security Model
 
 ```
-Password  ──â–º PBKDF2-HMAC-SHA256 (260k iter) ──â–º AES-256 key
+Password  ──► PBKDF2-HMAC-SHA256 (260k iter) ──► AES-256 key
                                                         │
-File ──────────────────────────────────────────â–º AES-CBC encrypt ──â–º .enc file
+File ──────────────────────────────────────────► AES-CBC encrypt ──► .enc file
                                                         │
-AES key ──â–º RSA-OAEP (recipient's public key) ──â–º embedded in .enc
+AES key ──► RSA-OAEP (recipient's public key) ──► embedded in .enc
 ```
 
 - **No hardcoded keys** — all keys are derived from user passwords with a unique random salt
